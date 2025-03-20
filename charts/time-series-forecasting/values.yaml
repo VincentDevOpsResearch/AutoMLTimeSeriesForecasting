@@ -1,5 +1,5 @@
 image:
-  repository: ghcr.io/skyworld-um/um_devopsteam/time-series-forecasting
+  repository: vincentjin98/app
   tag: latest                  
   pullPolicy: IfNotPresent        
 

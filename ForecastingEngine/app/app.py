@@ -53,6 +53,7 @@ def predict(data: List[TimeSeriesRecord]):
         # Select only mean, 0.025, and 0.975 columns from the results
         selected_results = predictions[percentiles].reset_index()
 
+        selected_results.rename(columns={'mean': 'prediction', '0.025': 'lowerBound', '0.975': 'upperBound'}, inplace=True)
         # Return the selected columns as a JSON response
         return selected_results.to_dict(orient="records")
     except Exception as e:
